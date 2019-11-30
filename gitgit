@@ -1,0 +1,10 @@
+#! /bin/bash
+cd `dirname $0`
+MESSAGE=$1
+if [ -z "$MESSAGE" ]; then
+  MESSAGE=`date +"%Y-%m-%d %H:%M:%S"`
+fi
+git add .
+git commit -m "$MESSAGE"
+git push
+
